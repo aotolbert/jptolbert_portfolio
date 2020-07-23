@@ -1,0 +1,20 @@
+{
+  "name": "jptolbert_portfolio",
+  "version": "1.0.0",
+  "description": "Online portfolio for Jill Patterson Tolbert - Math Teacher/Tutor",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "Portfolio",
+    "Jill",
+    "Tolbert",
+    "Tutor",
+    "Math",
+    "Teacher"
+  ],
+  "author": "Adam Tolbert",
+  "license": "ISC"
+}
