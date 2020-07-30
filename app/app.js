@@ -4,26 +4,36 @@ console.log("I am alive!");
 let last_known_scroll_position = 0;
 let ticking = false;
 
-let body = document.getElementsByTagName("BODY")[0];
-console.log(body);
+let body = document.getElementsByTagName('BODY')[0];
 
-let pageHeight = body.clientHeight;
+let windowHeight = window.innerHeight;
+let scrollHeight = document.body.scrollHeight;
 
-console.log(pageHeight);
+let maxScollPositionY = scrollHeight - windowHeight;
+console.log('Max scroll => "'+ maxScollPositionY);
 
-function doSomething(scroll_pos) {
-  // Do something with the scroll position
-  console.log(scroll_pos);
-//   document.getElementByClass("pageBackground").style.backgroundPosition = "0px 40px";
+function transformBackground(scrollPosition) {
+    // Because the background image is 125vh we have 25vh "hidden" under the viewport when the user is at the top of the document.
+    let degreeOfTransform = (scrollPosition / maxScollPositionY);
+    console.log(degreeOfTransform);
+
+    let transformValue = degreeOfTransform * -24;
+
+    let viewportTransformString = '0px ' + transformValue + 'vh';
+
+
+    // TODO 'Scroll' the background manipulating the y coordinate proportionate to the amount scrolled / total available scroll space with a max shift value of 25vh
+    body.style.backgroundPosition = viewportTransformString;
+    console.log(scrollPosition);
 
 }
 
 window.addEventListener('scroll', function(e) {
-  last_known_scroll_position = window.scrollY;
+  lastKnownScrollPosition = window.scrollY;
 
   if (!ticking) {
     window.requestAnimationFrame(function() {
-      doSomething(last_known_scroll_position);
+      transformBackground(lastKnownScrollPosition);
       ticking = false;
     });
 

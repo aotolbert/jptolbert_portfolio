@@ -37,7 +37,9 @@
   .hamburger-inner {
     display: block;
     top: 50%;
-    margin-top: -2px; }
+    margin-top: -2px; 
+  }
+
     .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
       width: 27px;
       height: 2px;
@@ -46,7 +48,8 @@
       position: absolute;
       transition-property: transform;
       transition-duration: 0.15s;
-      transition-timing-function: ease; }
+      transition-timing-function: ease; 
+    }
     .hamburger-inner::before, .hamburger-inner::after {
       content: "";
       display: block; }
@@ -54,7 +57,8 @@
       top: -10px; }
     .hamburger-inner::after {
       bottom: -10px; }
-  
+
+        
   /*
      * 3DX
      */
@@ -704,3 +708,23 @@
     .hamburger--vortex-r.is-active .hamburger-inner::after {
       bottom: 0;
       transform: rotate(-90deg); }
+
+
+
+
+            /* ************ MEDIA QUERIES ************ */
+  
+        
+      /* Phones and Handhelds ----------- */
+      @media only screen and (max-device-width : 500px) {
+        .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+          width: 20px;
+        }
+
+        .hamburger-box {
+          width: 20px;
+        }
+
+
+      
+      }

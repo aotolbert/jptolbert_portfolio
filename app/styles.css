@@ -6,7 +6,6 @@ html, body {
   max-width: 100%;
   -ms-overflow-style: none;
   background-image: url(../images/chalkboard_math_background.jpg);
-  height: 125vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

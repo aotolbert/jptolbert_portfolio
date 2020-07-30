@@ -20,16 +20,16 @@ router.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../app/index.html"));
 })
 
-router.get("/upcoming", (req, res) => {
-    res.sendFile(path.join(__dirname, "../app/index.html"));
+router.get("/tutoring", (req, res) => {
+    res.sendFile(path.join(__dirname, "../app/tutoring.html"));
 })
 
 router.get("/about", (req, res) => {
-    res.sendFile(path.join(__dirname, "../app/index.html"));
+    res.sendFile(path.join(__dirname, "../app/about.html"));
 })
 
 router.get("/contact", (req, res) => {
-    res.sendFile(path.join(__dirname, "../app/index.html"));
+    res.sendFile(path.join(__dirname, "../app/contact.html"));
 })
 
 

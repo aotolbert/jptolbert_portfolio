@@ -83,7 +83,6 @@
 
 }
 
-
 /* **************** TRANSITIONS AND ANIMATIONS **************** */
 
 /* Transforming the header */
@@ -260,6 +259,11 @@
   .menu-title {
       font-size: 2vh;
       }
+
+  .menu-button {
+    padding-top: 3vh;
+  }
+  
 }
 
 
