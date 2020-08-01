@@ -1,6 +1,6 @@
 
 html, body {
-  padding: 0;
+  /* padding: 0;
   margin: 0;
   font-family: 'Courier New', Courier, monospace;
   max-width: 100%;
@@ -10,9 +10,27 @@ html, body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 115vw 125vh;
-  /* background-position-y: top; */
-  background-position: 0px 0vh;
+  background-position: 0px 0vh; */
+  margin: 0;
 }
+
+.container {
+  width: 100vw;
+  background: grey;
+  font-size: 24px;
+}
+
+.parallax {
+  background: url(./images/chalkboard_math_background.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  /* height: 1000vh; */
+  min-height: 125vh;
+  min-width: 100vw;
+  background-size: 100vw 125vh;
+  background-position-y: 0vh;
+}
+
 
 .pageHeadlineContainer {
   padding-top: 30vh;
@@ -49,11 +67,17 @@ html, body {
 }
 
 .textBox {
-  height: 40vh;
+  min-height: 20vh;
   width: 85vw;
-  background-color: rgba(255, 255, 255, .15);
+  background-color: rgba(255, 255, 255, .35);
   backdrop-filter: blur(15px);
   margin-top: 10vh;
   margin-bottom: 10vh;
+  text-align: center;
+  padding: 25px;
+}
 
+.parallax-window {
+  min-height: 125vh;
+  background: transparent;
 }

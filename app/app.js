@@ -4,7 +4,7 @@ console.log("I am alive!");
 let last_known_scroll_position = 0;
 let ticking = false;
 
-let body = document.getElementsByTagName('BODY')[0];
+let body = document.getElementsByClassName('parallax')[0];
 
 let windowHeight = window.innerHeight;
 let scrollHeight = document.body.scrollHeight;
@@ -17,13 +17,13 @@ function transformBackground(scrollPosition) {
     let degreeOfTransform = (scrollPosition / maxScollPositionY);
     console.log(degreeOfTransform);
 
-    let transformValue = degreeOfTransform * -24;
+    let transformValue = degreeOfTransform * -8;
 
-    let viewportTransformString = '0px ' + transformValue + 'vh';
+    let viewportTransformString = transformValue + 'vh';
 
 
     // TODO 'Scroll' the background manipulating the y coordinate proportionate to the amount scrolled / total available scroll space with a max shift value of 25vh
-    body.style.backgroundPosition = viewportTransformString;
+    body.style.backgroundPositionY = viewportTransformString;
     console.log(scrollPosition);
 
 }
