@@ -33,28 +33,66 @@ html, body {
 
 
 .pageHeadlineContainer {
+
   padding-top: 30vh;
-  height: 50vh;
+  min-height: 50vh;
+  height: auto;
   width: 100vw;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-end;
   align-content: space-between;
+
 }
 
 .headlineImage {
-  background-color: maroon;
-  border-radius: 5px;
-  border-width: 1px;
-  width: 20vw;
-  height: 35vh;
+  border-radius: 10px;
+  min-width: 300px;
+  max-width: 80vw !important;
+  min-height: 450px;
+  height: 40vh;
+}
+
+#headlineImageHome {
+  background: url('./images/Guatemala portrait.jpeg') no-repeat center;
 }
 
 
+#headlineImageAbout {
+  background: url('./images/Family\ Xmas\ 2019.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-position: center;
+  min-width: 375px;
+  min-height: 300px;
+  min-width: 400px;
+  width: 40vw;
+  height: 30vw;
+
+}
+
 .headlineDescription {
+  padding: 20px;
+  background-color: ivory;
+  min-width: 340px;
   width: 50vw;
   height: 20vh;
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-evenly;
+}
+
+.headlineItem {
+  text-align: center;
+  min-width: 150px;
+
 }
 
 .textBoxContainer {

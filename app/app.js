@@ -17,7 +17,7 @@ function transformBackground(scrollPosition) {
     let degreeOfTransform = (scrollPosition / maxScollPositionY);
     console.log(degreeOfTransform);
 
-    let transformValue = degreeOfTransform * -8;
+    let transformValue = degreeOfTransform * -15;
 
     let viewportTransformString = transformValue + 'vh';
 
