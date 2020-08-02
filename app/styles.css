@@ -22,9 +22,8 @@ html, body {
 
 .parallax {
   background: url(./images/chalkboard_math_background.jpg) no-repeat center;
-  background-size: cover;
   background-attachment: fixed;
-  /* height: 1000vh; */
+  height: max-content; 
   min-height: 125vh;
   min-width: 100vw;
   background-size: 100vw 125vh;
