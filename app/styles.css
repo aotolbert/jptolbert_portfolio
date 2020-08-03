@@ -24,9 +24,8 @@ html, body {
   background: url(./images/chalkboard_math_background.jpg) no-repeat center;
   background-attachment: fixed;
   height: fit-content;
-  min-height: 200vh;
   min-width: 100vw;
-  background-size: 100vw 150%;
+  background-size: 100vw 125vh;
   background-position-y: 0vh;
 }
 
