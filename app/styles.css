@@ -26,7 +26,7 @@ html, body {
   height: fit-content;
   min-height: 200vh;
   min-width: 100vw;
-  background-size: 100vw 125vh;
+  background-size: 100vw 150%;
   background-position-y: 0vh;
 }
 
