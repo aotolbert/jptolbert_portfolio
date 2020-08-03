@@ -19,7 +19,7 @@ function transformBackground(scrollPosition) {
 
     let transformValue = degreeOfTransform * -20;
 
-    let viewportTransformString = transformValue + 'vh';
+    let viewportTransformString = transformValue + 'px';
 
     let debugEl = document.getElementById('debuglog');
     debugEl.innerText = viewportTransformString;
@@ -31,12 +31,37 @@ function transformBackground(scrollPosition) {
 
 }
 
+function transformBackgroundMobile(scrollPosition) {
+    // Because the background image is 125vh we have 25vh "hidden" under the viewport when the user is at the top of the document.
+    let degreeOfTransform = (scrollPosition / maxScollPositionY);
+    console.log(degreeOfTransform);
+
+    let baseTransformValluePx = scrollPosition;
+    let degreedAdditionalTransformValuePx = degreeOfTransform * 250;
+    console.log(degreedAdditionalTransformValuePx);
+
+    let transformValueActualPx = baseTransformValluePx - degreedAdditionalTransformValuePx;
+    console.log(transformValueActualPx);
+
+    let viewportTransformString = transformValueActualPx  + 'px';
+
+    let debugEl = document.getElementById('debuglog');
+    debugEl.innerText = viewportTransformString;
+
+
+    // TODO 'Scroll' the background manipulating the y coordinate proportionate to the amount scrolled / total available scroll space with a max shift value of 25vh
+    body.style.backgroundPositionY = viewportTransformString;
+    console.log(scrollPosition);
+
+}
+
+
 window.addEventListener('scroll', function(e) {
   lastKnownScrollPosition = window.scrollY;
 
   if (!ticking) {
     window.requestAnimationFrame(function() {
-      transformBackground(lastKnownScrollPosition);
+        transformBackgroundMobile(lastKnownScrollPosition);
       ticking = false;
     });
 

@@ -22,11 +22,11 @@ html, body {
 
 .parallax {
   background: url(./images/chalkboard_math_background.jpg) no-repeat center;
-  background-attachment: fixed;
-  height: fit-content;
+  background-attachment: scroll;
+  background-position: left top;
   min-width: 100vw;
-  background-size: 100vw 125vh;
-  background-position-y: 0vh;
+  background-size: 100vw 130vh;
+  background-position-y: 0px;
 }
 
 
