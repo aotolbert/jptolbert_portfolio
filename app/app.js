@@ -17,9 +17,9 @@ function transformBackground(scrollPosition) {
     let degreeOfTransform = (scrollPosition / maxScollPositionY);
     console.log(degreeOfTransform);
 
-    let transformValue = degreeOfTransform * -15;
+    let transformValue = degreeOfTransform * -300;
 
-    let viewportTransformString = transformValue + 'vh';
+    let viewportTransformString = transformValue + 'px';
 
 
     // TODO 'Scroll' the background manipulating the y coordinate proportionate to the amount scrolled / total available scroll space with a max shift value of 25vh
