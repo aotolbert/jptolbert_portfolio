@@ -13,7 +13,6 @@ let maxScollPositionY = scrollHeight - windowHeight;
 console.log('Max scroll => "'+ maxScollPositionY);
 
 function transformBackground(scrollPosition) {
-    ticking = false;
 
     // Because the background image is 125vh we have 25vh "hidden" under the viewport when the user is at the top of the document.
     let degreeOfTransform = (scrollPosition / maxScollPositionY);
@@ -34,7 +33,6 @@ function transformBackground(scrollPosition) {
 }
 
 function transformBackgroundMobile(scrollPosition) {
-    ticking = false;
 
     // Because the background image is 125vh we have 25vh "hidden" under the viewport when the user is at the top of the document.
     let degreeOfTransform = (scrollPosition / maxScollPositionY);
@@ -70,8 +68,9 @@ if(isMobile) {
         if (!ticking) {
             window.requestAnimationFrame(function() {
                 transformBackgroundMobile(lastKnownScrollPosition);
+                ticking = false;
             });
-            
+
             ticking = true;
 
           }
