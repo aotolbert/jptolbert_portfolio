@@ -16,19 +16,13 @@ function transformBackground(scrollPosition) {
 
     // Because the background image is 125vh we have 25vh "hidden" under the viewport when the user is at the top of the document.
     let degreeOfTransform = (scrollPosition / maxScollPositionY);
-    console.log(degreeOfTransform);
 
     let transformValue = degreeOfTransform * -20;
 
     let viewportTransformString = transformValue + 'vh';
 
-    let debugEl = document.getElementById('debuglog');
-    debugEl.innerText = viewportTransformString;
-
-
     // TODO 'Scroll' the background manipulating the y coordinate proportionate to the amount scrolled / total available scroll space with a max shift value of 25vh
     body.style.backgroundPositionY = viewportTransformString;
-    console.log(scrollPosition);
 
 }
 
@@ -36,24 +30,15 @@ function transformBackgroundMobile(scrollPosition) {
 
     // Because the background image is 125vh we have 25vh "hidden" under the viewport when the user is at the top of the document.
     let degreeOfTransform = (scrollPosition / maxScollPositionY);
-    console.log(degreeOfTransform);
 
     let baseTransformValluePx = scrollPosition;
     let degreedAdditionalTransformValuePx = degreeOfTransform * 250;
-    console.log(degreedAdditionalTransformValuePx);
 
     let transformValueActualPx = baseTransformValluePx - degreedAdditionalTransformValuePx;
-    console.log(transformValueActualPx);
 
     let viewportTransformString = transformValueActualPx  + 'px';
     // TODO 'Scroll' the background manipulating the y coordinate proportionate to the amount scrolled / total available scroll space with a max shift value of 25vh
     body.style.backgroundPositionY = viewportTransformString;
-
-    let debugEl = document.getElementById('debuglog');
-    debugEl.innerText = viewportTransformString;
-
-
-    console.log(scrollPosition);
 
 }
 
