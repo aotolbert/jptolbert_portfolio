@@ -1,6 +1,6 @@
 .header {
   min-height: 45px;
-  width: 100%;
+  width: 100vw;
   height: 10vh;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
   background: #09330f;
@@ -69,6 +69,8 @@
   line-height: 10vh;
   left: 5vw;
   z-index: 4;
+  white-space: nowrap;
+
 }
 
 .menu-button {
@@ -257,7 +259,7 @@
 
 @media only screen and (max-device-width : 500px) {
   .menu-title {
-      font-size: 2vh;
+      font-size: 1rem;
       }
 
   .menu-button {
@@ -269,6 +271,6 @@
 
 @media only screen and (min-device-width : 501px) and (max-device-width : 767px) {
 .menu-title {
-  font-size: 3vh;
-  }
+  font-size: 1rem;
+}
 }        

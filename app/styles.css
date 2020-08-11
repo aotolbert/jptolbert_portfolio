@@ -11,6 +11,8 @@ html, body {
   background-repeat: no-repeat;
   background-size: 115vw 125vh;
   background-position: 0px 0vh; */
+  overflow-x: hidden;
+  font-family: ChalkboardSE-Light;
   margin: 0;
 }
 
@@ -26,13 +28,19 @@ html, body {
   background-size: cover;
   background-size: 100vw 125vh;
   background-position-y: 0vh;
+  z-index: -999;
+}
+
+.parallax-window {
+  min-height: 125vh;
+  background: transparent;
 }
 
 
 .pageHeadlineContainer {
 
   padding-top: 30vh;
-  min-height: 50vh;
+  min-height: 40vh;
   height: auto;
   width: 100vw;
   display: flex;
@@ -44,18 +52,43 @@ html, body {
 
 }
 
-.headlineImage {
-  border-radius: 10px;
+.headlineImageContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: flex-end;
+  border-radius: 10px 10px 0px 0px;
   min-width: 300px;
-  max-width: 80vw !important;
+  width: auto;
+  max-width: 700px !important;
   min-height: 450px;
-  height: 40vh;
+  height: 60vh;
 }
 
 #headlineImageHome {
-  background: url('./images/Guatemala portrait.jpeg') no-repeat center;
+  width: 100%;
+  height: 100%;
+  align-self: center;
 }
 
+.headlineSocialBar {
+  height: 10vh;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  background-color: white;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+
+
+.socialIcon {
+  height: 50px;
+  width: 50px;
+}
 
 #headlineImageAbout {
   background: url('./images/Family\ Xmas\ 2019.jpeg');
@@ -66,8 +99,8 @@ html, body {
   min-width: 375px;
   min-height: 300px;
   min-width: 400px;
-  width: 40vw;
-  height: 30vw;
+  width: 80vw;
+  height: 55vw;
 
 }
 
@@ -88,8 +121,8 @@ html, body {
 
 .headlineItem {
   text-align: center;
-  min-width: 150px;
-
+  min-width: 100px;
+  flex-shrink: 1;
 }
 
 .textBoxContainer {
@@ -112,10 +145,53 @@ html, body {
   padding: 25px;
 }
 
-.parallax-window {
-  min-height: 125vh;
-  background: transparent;
+.endorsementBox {
+  display: flex;
+  align-content: space-between;
+  min-height: 20vh;
+  width: 85vw;
+  background-color: rgba(255, 255, 255, .85);
+  backdrop-filter: blur(15px);
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  text-align: center;
+  padding: 25px;
 }
+
+.endorsementImage {
+  width: 20vw;
+}
+
+.endorsementText {
+  width: 65vw;
+}
+
+.footer {
+  height: 15vh;
+  background-color: #09330f;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1rem;
+}
+
+
+.borderedFooterLink {
+  padding-right: 5vw;
+  padding-left: 5vw;
+  
+}
+
+.borderedFooterLink a {
+  color: white;
+  text-decoration: none; /* no underline */
+  display: block;
+}
+
+
+
 
 @media only screen and (max-device-width : 767px) {
   .parallax {

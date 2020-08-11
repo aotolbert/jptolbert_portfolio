@@ -17,7 +17,7 @@ function transformBackground(scrollPosition) {
     // Because the background image is 125vh we have 25vh "hidden" under the viewport when the user is at the top of the document.
     let degreeOfTransform = (scrollPosition / maxScollPositionY);
 
-    let transformValue = degreeOfTransform * -20;
+    let transformValue = degreeOfTransform * -25;
 
     let viewportTransformString = transformValue + 'vh';
 
