@@ -23,6 +23,7 @@
             <ul class="header-content hidden">
                 <li><a href="./" id="header1">- Home</a></li>
                 <li><a href="./about" id="header2">- About</a></li>
+                <li><a href="./resources" id="header2">- Resources</a></li>
                 <li><a href="./tutoring" id="header3">- Tutoring</a></li>
                 <li><a href="./contact" id="header3">- Contact</a></li>
             </ul>
@@ -44,22 +45,32 @@
 
                 <div class="headlineImageContainer">
                     <picture>
-                            <source media="(min-width: 650px)" srcset="./images/Guatemala%20portrait.jpeg">
+                            <source media="(max-width: 850px)" srcset="./images/Guatemala%20portrait.jpeg">
+                            <source srcset="./images/Guatemala%20portrait.jpeg">
                             <img id="headlineImageHome" src="./images/Guatemala portrait.jpeg">
                     </picture>
 
                     <div class="headlineSocialBar">
                         <div class="headlineItem">
-                            <img class="socialIcon" src="./images/twitter_icon.png"/>
+                            <picture>
+                                <source srcset="./images/youtube_icon.webp" type="image/webp">
+                                <img src="./images/youtube_icon.png" class="socialIcon">
+                            </picture>
                         </div>  
 
                         <div class="headlineItem">
-                            <img class="socialIcon" src="./images/facebook_icon.png"/>
+                            <picture>
+                                <source srcset="./images/instagram_icon.webp" type="image/webp">
+                                <img src="./images/instagram_icon.png" class="socialIcon">
+                            </picture>                        
                         </div>                      
                         
                         
                         <div class="headlineItem">
-                            <img class="socialIcon" src="./images/calendar_icon.png"/>
+                            <picture>
+                                <source srcset="./images/calendar_icon.png" type="image/webp">
+                                <img src="./images/youtube_icon.png" class="socialIcon">
+                            </picture>
                         </div>  
         
                     </div>
@@ -151,6 +162,7 @@
         <div class="footer">
             <div class="borderedFooterLink"><a href="./">Home</a></div>
             <div class="borderedFooterLink"><a href="./about">About</a></div>
+            <div class="borderedFooterLink"><a href="./resources">Resources</a></div>
             <div class="borderedFooterLink"><a href="./tutoring">Tutoring</a></div>
             <div class="borderedFooterLink"><a href="./contact">Contact</a></div>
         </div>

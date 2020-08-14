@@ -33,7 +33,9 @@ router.get("/contact", (req, res) => {
 })
 
 
-
+router.get("/resources", (req, res) => {
+    res.sendFile(path.join(__dirname, "../app/resources.html"));
+})
 
 
 

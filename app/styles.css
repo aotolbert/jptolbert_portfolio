@@ -62,7 +62,7 @@ html, body {
   min-width: 300px;
   width: auto;
   max-width: 700px !important;
-  min-height: 450px;
+  min-height: 475px;
   height: 60vh;
 }
 
@@ -73,7 +73,8 @@ html, body {
 }
 
 .headlineSocialBar {
-  height: 10vh;
+  padding-top: 10px;
+  height: 60px;
   width: 100%;
   border-radius: 0px 0px 10px 10px;
   background-color: white;
@@ -86,12 +87,12 @@ html, body {
 
 
 .socialIcon {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
+  object-position: 0px 0px;
 }
 
 #headlineImageAbout {
-  background: url('./images/Family\ Xmas\ 2019.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: bottom;
@@ -109,7 +110,7 @@ html, body {
   background-color: ivory;
   min-width: 340px;
   width: 50vw;
-  height: 20vh;
+  min-height: 20vh;
   margin-top: 5vh;
   display: flex;
   flex-direction: row;
