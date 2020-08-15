@@ -10,7 +10,7 @@ let windowHeight = window.innerHeight;
 let scrollHeight = document.body.scrollHeight;
 
 let maxScollPositionY = scrollHeight - windowHeight;
-console.log('Max scroll => "'+ maxScollPositionY);
+console.log('Max scroll => ' + maxScollPositionY);
 
 function transformBackground(scrollPosition) {
 
@@ -41,7 +41,7 @@ function transformBackgroundMobile(scrollPosition) {
     body.style.backgroundPositionY = viewportTransformString;
 
 }
-
+console.log(navigator.userAgent);
 var isMobile = navigator.userAgent.match(
     /(iPhone|iPod|iPad|Android|webOS|BlackBerry|IEMobile|Opera Mini)/i);
 
