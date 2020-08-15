@@ -196,7 +196,7 @@ html, body {
 
 @media only screen and (max-device-width : 767px) {
   .parallax {
-    background: url(./images/chalkboard_math_background_mobile.jpg) no-repeat center;
+    background: url(./images/chalkboard_math_background.jpg) no-repeat center;
     background-attachment: scroll;
     background-position: left top;
     min-width: 100vw;
