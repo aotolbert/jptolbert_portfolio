@@ -44,8 +44,11 @@ function transformBackgroundMobile(scrollPosition) {
 console.log(navigator.userAgent);
 var isMobile = navigator.userAgent.match(
     /(iPhone|iPod|iPad|Android|webOS|BlackBerry|IEMobile|Opera Mini)/i);
+var isSafari = navigator.userAgent.match(
+        /(Safari)/i);
+if(isSafari) {
 
-if(isMobile) {
+} else if(isMobile) {
     // body.style.backgroundPosition = 'left top';
     body.style.backgroundAttachment = 'scroll';
 
