@@ -38,14 +38,29 @@
         </div>
         <!-- <div class="parallax" data-parallax="scroll" data-image-src="/path/to/image.jpg"></div> -->
         <div class="parallax">
-            <div class="pageHeadlineContainer">
-        
-                <div class="headlineImage">
-        
-                </div>
-        
+            
+            <div class="tutoringHeadlineContainer">
+                
                 <div class="headlineDescription">
-        
+                    Availability:
+                    <ul id="tutoringCalendarLegendList">
+                        <li style="color: blue;">Blue : Open Office Hours</li>
+                        <li style="color: forestgreen;">Green : Available to Schedule</li>
+                        <li style="color: crimson;">Red : Unavailable/Already Scheduled</li>
+                    </ul>
+                </div>
+
+                <div class="tutoringCalendarContaner">
+                    <iframe src="https://calendar.google.com/calendar/embed?src=aotolbert%40gmail.com&ctz=America%2FNew_York" 
+                        name="tutoringCalendarPublic"
+                        id="tutoringCalendarPublic" 
+                        onload="iframeLoaded()"
+                        style="border: 0" 
+                        width="300" 
+                        height="100%" 
+                        frameborder="0" 
+                        scrolling="yes">
+                    </iframe>
                 </div>
             </div>
 
@@ -53,19 +68,12 @@
 
         <div class="textBoxContainer">
 
-
             <div class="textBox">
-
-
-            </div>
-
-            <div class="textBox">
-
-
-            </div>
-
-            <div class="textBox">
-
+                Im always looking for ways to help my students excel in math and really comprehend the concepts that we present in class. Sometimes a student may want additional assistance and I am availiable outside the classroom in two main ways:
+                 <ul>
+                    <li>Office Hours (Mon - Fri 4PM-6PM EST) Held in private Zoom meeting room. <a href="./contact">Submit a request</a> to be added to Approved Students list and gain access to the link
+                    <li>1-on-1 or Small Group Tutoring Sessions <a href="./schedule">Schedule Here </a> ($40/hr) (<a href="./contact">Inquire about scholarships</a>). I am experienced and can cover any math needs from emelentary school through college-level calculus</li>
+                 </ul>
             </div>
 
 
@@ -86,6 +94,7 @@
     
 
     <script src='./top-nav.js'></script>
+    <script src='./tutoring.js'></script>
     <script src='./app.js'></script>
 
 </body>

@@ -4,7 +4,7 @@ console.log("I am alive!");
 let last_known_scroll_position = 0;
 let ticking = false;
 
-let body = document.getElementsByClassName('parallax')[0];
+let parallaxEl = document.getElementsByClassName('parallax')[0];
 
 let windowHeight = window.innerHeight;
 let scrollHeight = document.body.scrollHeight;
@@ -22,7 +22,7 @@ function transformBackground(scrollPosition) {
     let viewportTransformString = transformValue + 'vh';
 
     // TODO 'Scroll' the background manipulating the y coordinate proportionate to the amount scrolled / total available scroll space with a max shift value of 25vh
-    body.style.backgroundPositionY = viewportTransformString;
+    parallaxEl.style.backgroundPositionY = viewportTransformString;
 
 }
 
@@ -30,16 +30,13 @@ function transformBackgroundMobile(scrollPosition) {
 
     // Because the background image is 125vh we have 25vh "hidden" under the viewport when the user is at the top of the document.
     let degreeOfTransform = (scrollPosition / maxScollPositionY);
-
-    let baseTransformValluePx = scrollPosition;
-    let degreedAdditionalTransformValuePx = degreeOfTransform * 300;
-
-    let transformValueActualPx = baseTransformValluePx - degreedAdditionalTransformValuePx;
+    let degreedAdditionalTransformValuePx = degreeOfTransform * 600;
+    let transformValueActualPx = scrollPosition - degreedAdditionalTransformValuePx.toFixed(1);
 
     let viewportTransformString = transformValueActualPx  + 'px';
     // TODO 'Scroll' the background manipulating the y coordinate proportionate to the amount scrolled / total available scroll space with a max shift value of 25vh
-    body.style.backgroundPositionY = viewportTransformString;
-
+    parallaxEl.style.backgroundPositionY = viewportTransformString;
+    // requestAnimationFrame( transformBackgroundMobile );
 }
 console.log(navigator.userAgent);
 var isMobile = navigator.userAgent.match(
@@ -53,7 +50,7 @@ if(isSafari) {
 
 if(isMobile) {
     // body.style.backgroundPosition = 'left top';
-    body.style.backgroundAttachment = 'scroll';
+    parallaxEl.style.backgroundAttachment = 'scroll';
 
     // background-attachment: scroll;
     // background-position: left top;
@@ -62,16 +59,15 @@ if(isMobile) {
     console.log('I am on mobile');
     window.addEventListener('scroll', function(e) {
         lastKnownScrollPosition = window.scrollY;
-      
-        if (!ticking) {
+        // if (!ticking) {
             window.requestAnimationFrame(function() {
                 transformBackgroundMobile(lastKnownScrollPosition);
-                ticking = false;
+                // ticking = false;
             });
 
-            ticking = true;
+            // ticking = true;
 
-          }
+        //   }
           
       });
 } else {

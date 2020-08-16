@@ -52,6 +52,20 @@ html, body {
 
 }
 
+.tutoringHeadlineContainer {
+  padding-top: 10vh;
+  min-height: 40vh;
+  height: auto;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center; 
+  align-items: flex-end;
+  align-content: space-between;
+
+}
+
 
 
 .headlineImageContainer {
@@ -84,6 +98,19 @@ html, body {
   height: 50vh;
 }
 
+.tutoringCalendarContaner {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: flex-end;
+  border-radius: 10px 10px 0px 0px;
+  min-width: 300px;
+  width: auto;
+  min-height: 400px;
+  height: 50vh;
+  margin-top: 10px;
+}
 
 .headlineSocialBar {
   padding-top: 10px;
