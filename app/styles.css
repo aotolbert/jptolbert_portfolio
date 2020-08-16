@@ -46,13 +46,16 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start; 
   align-items: flex-end;
   align-content: space-between;
 
 }
 
+
+
 .headlineImageContainer {
+  margin-left: 5vw;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -66,11 +69,21 @@ html, body {
   height: 60vh;
 }
 
-#headlineImageHome {
-  width: 100%;
-  height: 100%;
-  align-self: center;
+
+.largeHeadlineImageContainer {
+  margin-left: 5vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: flex-end;
+  border-radius: 10px 10px 0px 0px;
+  min-width: 300px;
+  width: auto;
+  min-height: 400px;
+  height: 50vh;
 }
+
 
 .headlineSocialBar {
   padding-top: 10px;
@@ -85,6 +98,19 @@ html, body {
   flex-wrap: nowrap;
 }
 
+.headlineSocialBarTop {
+  padding-top: 10px;
+  height: 60px;
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+  background-color: white;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  font-size: 1rem;
+}
 
 .socialIcon {
   height: 40px;
@@ -92,24 +118,34 @@ html, body {
   object-position: 0px 0px;
 }
 
-#headlineImageAbout {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: bottom;
-  background-position: center;
-  min-width: 375px;
-  min-height: 300px;
-  min-width: 400px;
-  width: 80vw;
-  height: 55vw;
+#headlineImageHome {
+  width: 100%;
+  max-width: 90vw;
+  height: 100%;
+  align-self: center;
+}
 
+#headlineImageResource {
+  width: 90vw;
+  max-height: 60vh;
+  min-height: 45vw;
+  height: 65vw;
+  flex-grow: 1;
+}
+
+#headlineImageAbout {
+  max-width: 90vw !important;
+  max-height: 550px;
+  min-height: 300px;
+  height: 55vw;
 }
 
 .headlineDescription {
   padding: 20px;
+  margin-left: 5vw;
+  margin-right: 5vw;
   background-color: ivory;
-  min-width: 340px;
-  width: 50vw;
+  width: 40vw; 
   min-height: 20vh;
   margin-top: 5vh;
   display: flex;
@@ -118,6 +154,7 @@ html, body {
   justify-content: space-evenly;
   align-items: center;
   align-content: space-evenly;
+  flex-grow: 1;
 }
 
 .headlineItem {
@@ -149,6 +186,8 @@ html, body {
 .endorsementBox {
   display: flex;
   align-content: space-between;
+  border-radius: 10px;
+  box-shadow: 1px 2px 7px 0px;
   min-height: 20vh;
   width: 85vw;
   background-color: rgba(255, 255, 255, .85);
@@ -164,6 +203,8 @@ html, body {
 }
 
 .endorsementText {
+  padding: 25px;
+  text-align: justify;
   width: 65vw;
 }
 
@@ -192,17 +233,15 @@ html, body {
 }
 
 
+.parallax {
+  background: url(./images/chalkboard_math_background.jpg) no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+  min-width: 100vw;
+  background-size: 100vw 200vh;
+  background-position-y: 0px;
+  z-index: -999;
+}
 
-
-@media only screen and (max-device-width : 767px) {
-  .parallax {
-    background: url(./images/chalkboard_math_background.jpg) no-repeat center;
-    background-attachment: scroll;
-    background-position: left top;
-    min-width: 100vw;
-    background-size: 100vw 140vh;
-    background-position-y: 0px;
-  }
-}        
 
 

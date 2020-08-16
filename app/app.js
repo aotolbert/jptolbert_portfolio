@@ -17,7 +17,7 @@ function transformBackground(scrollPosition) {
     // Because the background image is 125vh we have 25vh "hidden" under the viewport when the user is at the top of the document.
     let degreeOfTransform = (scrollPosition / maxScollPositionY);
 
-    let transformValue = degreeOfTransform * -25;
+    let transformValue = degreeOfTransform * -30;
 
     let viewportTransformString = transformValue + 'vh';
 
@@ -32,7 +32,7 @@ function transformBackgroundMobile(scrollPosition) {
     let degreeOfTransform = (scrollPosition / maxScollPositionY);
 
     let baseTransformValluePx = scrollPosition;
-    let degreedAdditionalTransformValuePx = degreeOfTransform * 250;
+    let degreedAdditionalTransformValuePx = degreeOfTransform * 300;
 
     let transformValueActualPx = baseTransformValluePx - degreedAdditionalTransformValuePx;
 
@@ -46,6 +46,13 @@ var isMobile = navigator.userAgent.match(
     /(iPhone|iPod|iPad|Android|webOS|BlackBerry|IEMobile|Opera Mini)/i);
 
 if(isMobile) {
+    // body.style.backgroundPosition = 'left top';
+    body.style.backgroundAttachment = 'scroll';
+
+    // background-attachment: scroll;
+    // background-position: left top;
+
+
     console.log('I am on mobile');
     window.addEventListener('scroll', function(e) {
         lastKnownScrollPosition = window.scrollY;
