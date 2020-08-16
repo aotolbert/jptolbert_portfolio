@@ -83,6 +83,23 @@ html, body {
   height: 60vh;
 }
 
+.classroomImageContainer {
+  margin-left: 10vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: flex-end;
+  justify-content: flex-end;
+  border-radius: 10px 10px 0px 0px;
+  min-width: 300px;
+  width: 80vw;
+  /* max-width: 700px !important; */
+  min-height: 475px;
+  min-height: 300px;
+  height: 95vh;
+}
+
 
 .largeHeadlineImageContainer {
   margin-left: 5vw;
@@ -120,9 +137,23 @@ html, body {
   background-color: white;
   top: 10px;
   display: flex;
-  align-items: center;
+  align-items: center; 
   justify-content: space-around;
   flex-wrap: nowrap;
+}
+
+
+.headlineClassScheduleBar {
+  padding-top: 20px;
+  height: auto;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  background-color: white;
+  top: 10px;
+  display: flex;
+  align-items: flex-start; 
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .headlineSocialBarTop {
@@ -137,7 +168,26 @@ html, body {
   justify-content: space-around;
   flex-wrap: nowrap;
   font-size: 1rem;
+  z-index: 1;
 }
+
+.headlineItem {
+  text-align: center;
+  min-width: 100px;
+  flex-shrink: 1;
+}
+
+
+.headlineClassScheduleBar > .headlineItem {
+  font-size: 0.9rem;
+  max-width: 150px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+}
+
+
+
 
 .socialIcon {
   height: 40px;
@@ -148,15 +198,19 @@ html, body {
 #headlineImageHome {
   width: 100%;
   max-width: 90vw;
+  min-height: 200px;
+  max-height: 800px;
   height: 100%;
   align-self: center;
 }
 
 #headlineImageResource {
-  width: 90vw;
-  max-height: 60vh;
-  min-height: 45vw;
-  height: 65vw;
+  width: 100%;
+  max-width: 90vw;
+  /* max-height: 60vh; */
+  min-height: 300px;
+  height: 35vw;
+  max-height: 60w;
   flex-grow: 1;
 }
 
@@ -184,11 +238,6 @@ html, body {
   flex-grow: 1;
 }
 
-.headlineItem {
-  text-align: center;
-  min-width: 100px;
-  flex-shrink: 1;
-}
 
 .textBoxContainer {
   padding-top: 5vh;
@@ -243,7 +292,7 @@ html, body {
   flex-wrap: nowrap;
   justify-content: space-evenly;
   align-items: center;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 
@@ -268,6 +317,7 @@ html, body {
   background-position-y: 0px;
   z-index: -999;
 }
+
 
 
 

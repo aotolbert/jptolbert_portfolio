@@ -38,7 +38,7 @@
         </div>
         <!-- <div class="parallax" data-parallax="scroll" data-image-src="/path/to/image.jpg"></div> -->
         <div class="parallax">
-            <div class="pageHeadlineContainer">
+            <!-- <div class="pageHeadlineContainer">
                 <a href="https://docs.google.com/presentation/d/10PuBy2rBabRonqL1IkU99xmQRwp5bcRJjvcFn5o6lKM/edit#slide=id.p" target="_blank">
 
                     <div class="largeHeadlineImageContainer">
@@ -51,26 +51,47 @@
                                 <img id="headlineImageResource" src="./images/virtual_classrom_image.jpg">
                             </picture>
 
+                            <div class="headlineSocialBar">
+                                <span>Click to Visit My Virtual Classroom!</span>
+                            </div>
+
                 </div>
             </a>
 
+            </div> -->
 
-                <!-- <div id="headlineImageAbout" class="headlineImageContainer">
+            <div class="classroomImageContainer">
+                    <div class="headlineSocialBarTop">
+                        <a href="https://docs.google.com/presentation/d/10PuBy2rBabRonqL1IkU99xmQRwp5bcRJjvcFn5o6lKM/edit#slide=id.p" target="_blank">
+
+                        <span>Click to Visit My Virtual Classroom!</span>
+                        </a>
+                    </div>
                     <picture>
-                        <source srcset="./images/Geo_Support.webp" type="image/webp">
-                        <img src="./images/Geo_Support.jpeg">
+                            <source media="(max-width: 850px)" srcset="./images/virtual_classrom_image.jpg">
+                            <source srcset="./images/virtual_classrom_image.jpg">
+                            <img id="headlineImageHome" src="./images/virtual_classrom_image.jpg">
                     </picture>
-                </div>
-        
-                <div class="headlineDescription">
+                <div class="headlineClassScheduleBar">
                     <div class="headlineItem">
-                        "The essence of mathematics is not to make simple things complicated, but to make complicated things simple.”  
-                        <br/>
-                        -Stanley Gudder
+                        <div>1st Period : Algebra 8:00 - 11:00</div>
                     </div>  
-                </div> -->
-            </div>
 
+                    <div class="headlineItem">
+                        <div>2rd Period : Calculus 11:00 - 1:00m</div>
+                        <!-- <div>Happening Now!!</div> -->
+                    </div>                     
+                    
+                    <div class="headlineItem">
+                        <div>3rd Period : Planning 1:00 - 2:00</div>
+                    </div>  
+    
+                    <div class="headlineItem">
+                        <div>4th Period : Algebra 2:00 - 3:00</div>
+                    </div>  
+
+                </div>
+            </div>
 
 
         <div class="textBoxContainer">
@@ -118,6 +139,7 @@
     
 
     <script src='./top-nav.js'></script>
+    <script src='./resource.js'></script>
     <script src='./app.js'></script>
 
 </body>

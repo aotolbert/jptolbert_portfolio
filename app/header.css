@@ -40,7 +40,11 @@
   color: #CCC;
 }
 
-.hidden li {
+.hidden {
+  pointer-events: none;
+}
+
+.avoid-clicks {
   pointer-events: none;
 }
 
