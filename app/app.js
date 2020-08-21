@@ -37,6 +37,7 @@ function transformBackgroundMobile(scrollPosition) {
     // TODO 'Scroll' the background manipulating the y coordinate proportionate to the amount scrolled / total available scroll space with a max shift value of 25vh
     parallaxEl.style.backgroundPositionY = viewportTransformString;
     // requestAnimationFrame( transformBackgroundMobile );
+    
 }
 console.log(navigator.userAgent);
 var isMobile = navigator.userAgent.match(
@@ -50,26 +51,37 @@ if(isSafari) {
 
 if(isMobile) {
     // body.style.backgroundPosition = 'left top';
-    parallaxEl.style.backgroundAttachment = 'scroll';
+    // parallaxEl.classList.add('isMobile');
 
     // background-attachment: scroll;
     // background-position: left top;
-
-
-    console.log('I am on mobile');
     window.addEventListener('scroll', function(e) {
         lastKnownScrollPosition = window.scrollY;
-        // if (!ticking) {
-            window.requestAnimationFrame(function() {
-                transformBackgroundMobile(lastKnownScrollPosition);
-                // ticking = false;
-            });
-
-            // ticking = true;
-
-        //   }
-          
+      
+        if (!ticking) {
+          window.requestAnimationFrame(function() {
+            transformBackground(lastKnownScrollPosition);
+            ticking = false;
+          });
+      
+          ticking = true;
+        }
       });
+
+    console.log('I am on mobile');
+    // window.addEventListener('scroll', function(e) {
+    //     lastKnownScrollPosition = window.scrollY;
+    //     // if (!ticking) {
+    //         // window.requestAnimationFrame(function() {
+    //         //     transformBackgroundMobile(lastKnownScrollPosition);
+    //         //     // ticking = false;
+    //         // });
+
+    //         // ticking = true;
+
+    //     //   }
+          
+    //   });
 } else {
     console.log('I am  not on mobile');
 
