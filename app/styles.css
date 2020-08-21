@@ -261,7 +261,9 @@ html, body {
 
 .endorsementBox {
   display: flex;
-  align-content: space-between;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
   border-radius: 10px;
   box-shadow: 1px 2px 7px 0px;
   min-height: 20vh;
@@ -276,12 +278,13 @@ html, body {
 
 .endorsementImage {
   width: 20vw;
+  min-width: 250px;
 }
 
 .endorsementText {
   padding: 25px;
   text-align: justify;
-  width: 65vw;
+  width: 60vw;
 }
 
 .footer {
