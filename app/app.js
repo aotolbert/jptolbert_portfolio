@@ -60,7 +60,7 @@ if(isMobile) {
       
         if (!ticking) {
           window.requestAnimationFrame(function() {
-            transformBackground(lastKnownScrollPosition);
+            transformBackgroundMobile(lastKnownScrollPosition);
             ticking = false;
           });
       
