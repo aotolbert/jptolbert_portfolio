@@ -16,6 +16,12 @@ html, body {
   margin: 0;
 }
 
+.body {
+  height: 100%;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
 .container {
   width: 100vw;
   background: grey;
@@ -222,6 +228,7 @@ html, body {
   border-radius: 10px 10px 0px 0px;
   width: auto;
   max-width: 86vw;
+  background-color: white;
 }
 
 .headlineDescription {
