@@ -33,7 +33,7 @@ html, body {
   background-attachment: fixed;
   background-size: cover;
   background-size: 100vw 125vh;
-  background-position-y: 0vh;
+  background-position-y: 0px;
   z-index: -999;
 }
 
@@ -145,7 +145,7 @@ html, body {
   align-items: center; 
   justify-content: space-around;
   flex-wrap: nowrap;
-  max-width: 88vw;
+  max-width: 90vw;
 }
 
 
@@ -337,7 +337,7 @@ html, body {
   min-width: 100vw;
   min-height: 150vh;
   background-size: 100vw 200vh;
-  background-position-y: 0px;
+  background-position-y: -300px;
   z-index: 0;
 }
 
