@@ -32,7 +32,7 @@ html, body {
   background: url(./images/chalkboard_math_background.jpg) no-repeat center;
   background-attachment: fixed;
   background-size: cover;
-  background-size: 100vw 125vh;
+  background-size: 100vw 150vh;
   background-position-y: 0px;
   z-index: -999;
 }
