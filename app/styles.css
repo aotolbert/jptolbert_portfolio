@@ -36,6 +36,10 @@ html, body {
   background: transparent;
 }
 
+.headlineContainer {
+
+}
+
 
 .pageHeadlineContainer {
   position: relative;
@@ -78,10 +82,19 @@ html, body {
   border-radius: 10px 10px 0px 0px;
   min-width: 300px;
   width: auto;
-  max-width: 700px !important;
-  min-height: 475px;
-  height: 60vh;
+  max-width: 700px;
+  min-height: 400px;
+  height: 50vh;
 }
+
+
+
+#largeHeadlineImageContainer {
+  min-height: 400px !important;
+  max-width: 90vw !important;
+  height: 50vh !important;;
+}
+
 
 .classroomImageContainer {
   margin-left: 10vw;
@@ -101,20 +114,6 @@ html, body {
 }
 
 
-.largeHeadlineImageContainer {
-  margin-left: 5vw;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: stretch;
-  justify-content: flex-end;
-  border-radius: 10px 10px 0px 0px;
-  min-width: 300px;
-  width: auto;
-  min-height: 400px;
-  height: 50vh;
-}
-
 .tutoringCalendarContaner {
   display: flex;
   flex-direction: column;
@@ -131,8 +130,8 @@ html, body {
 
 .headlineSocialBar {
   padding-top: 10px;
-  height: 60px;
-  width: 100%;
+  min-height: 75px;
+  height: 75px;
   border-radius: 0px 0px 10px 10px;
   background-color: white;
   top: 10px;
@@ -140,6 +139,7 @@ html, body {
   align-items: center; 
   justify-content: space-around;
   flex-wrap: nowrap;
+  max-width: 88vw;
 }
 
 
@@ -195,30 +195,33 @@ html, body {
   object-position: 0px 0px;
 }
 
-#headlineImageHome {
+.headlineImage {
   width: 100%;
-  max-width: 90vw;
-  min-height: 200px;
-  max-height: 800px;
-  height: 100%;
-  align-self: center;
+  height: 101%;
+}
+
+#headlineImageHome {
+  border: 1vw solid white;
+  border-radius: 10px 10px 0px 0px;
+  width: auto;
+  max-width: 86vw;
 }
 
 #headlineImageResource {
   width: 100%;
-  max-width: 90vw;
   /* max-height: 60vh; */
   min-height: 300px;
   height: 35vw;
   max-height: 60w;
   flex-grow: 1;
+  border-radius: 0px !important;
 }
 
-#headlineImageAbout {
-  max-width: 90vw !important;
-  max-height: 550px;
-  min-height: 300px;
-  height: 55vw;
+.headlineImagePicture{
+  border: 1vw solid white;
+  border-radius: 10px 10px 0px 0px;
+  width: auto;
+  max-width: 86vw;
 }
 
 .headlineDescription {
@@ -276,14 +279,19 @@ html, body {
   padding: 25px;
 }
 
-.endorsementImage {
+.endorsementImageContainer {
   width: 20vw;
   min-width: 250px;
 }
 
+.endorsementImage {
+  width: 100%;
+
+}
+
 .endorsementText {
   padding: 25px;
-  text-align: justify;
+  text-align: initial;
   width: 60vw;
 }
 
