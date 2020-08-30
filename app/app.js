@@ -30,7 +30,7 @@ function transformBackgroundMobile(scrollPosition) {
 
     // An initial offset is the easiest way to soften the initial shock of scrolling rapidly on mobile
     // Because it takes a second for the javascript to kick in, offsetting the background above the viewport kides the jerk better than a colored background
-    const initialOffset = 300
+    const initialOffset = 150
     // Because the background image is 125vh we have 25vh "hidden" under the viewport when the user is at the top of the document.
     let degreeOfTransform = (scrollPosition / maxScollPositionY);
     let degreedAdditionalTransformValuePx = degreeOfTransform * 600;

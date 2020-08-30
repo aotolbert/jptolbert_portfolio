@@ -337,7 +337,7 @@ html, body {
   min-width: 100vw;
   min-height: 150vh;
   background-size: 100vw 200vh;
-  background-position-y: -300px;
+  background-position-y: -150px;
   z-index: 0;
 }
 
