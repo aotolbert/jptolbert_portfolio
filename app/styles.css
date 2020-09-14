@@ -49,7 +49,7 @@ html, body {
 
 .pageHeadlineContainer {
   position: relative;
-  padding-top: 30vh;
+  padding-top: 25vh;
   min-height: 40vh;
   height: auto;
   width: 100vw;
@@ -93,7 +93,20 @@ html, body {
   height: 50vh;
 }
 
-
+.headlineImageHeroContainer {
+  margin-left: 5vw;
+  margin-top: 50px;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: flex-end;
+  border-radius: 10px 10px 0px 0px;
+  min-width: 300px;
+  min-height: 400px;
+  height: 50vh;
+}
 
 #largeHeadlineImageContainer {
   min-height: 400px !important;
@@ -127,11 +140,12 @@ html, body {
   align-content: stretch;
   justify-content: flex-end;
   border-radius: 10px 10px 0px 0px;
-  min-width: 300px;
+  min-width: 90vw;
   width: auto;
   min-height: 400px;
   height: 50vh;
   margin-top: 10px;
+  background-color: white;
 }
 
 .headlineSocialBar {
@@ -224,10 +238,11 @@ html, body {
 }
 
 .headlineImagePicture{
+  max-height: 100%;
   border: 1vw solid white;
   border-radius: 10px 10px 0px 0px;
   width: auto;
-  max-width: 86vw;
+  max-width: 88vw;
   background-color: white;
 }
 
@@ -246,6 +261,7 @@ html, body {
   align-items: center;
   align-content: space-evenly;
   flex-grow: 1;
+  text-align: center;
 }
 
 
@@ -258,17 +274,52 @@ html, body {
   align-content: space-between;
 }
 
+
 .textBox {
   min-height: 20vh;
   width: 85vw;
   background-color: rgba(255, 255, 255, .35);
   backdrop-filter: blur(15px);
-  margin-top: 10vh;
+  margin-top: 5vh;
   margin-bottom: 10vh;
   text-align: center;
   padding: 25px;
 }
 
+.youtubeVideoContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  align-content: space-between;
+  flex-wrap: nowrap;
+}
+
+
+.youtubeVideo {
+  min-width: 375px;
+  min-height: 300px;
+  width: 30vw;
+  height: auto;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+}
+
+@media only screen and (max-width: 850px) {
+  .youtubeVideoContainer {
+    /* display: flex;
+    justify-content: space-evenly;
+    align-items: stretch; */
+    align-content: stretch;
+    flex-wrap: wrap;
+  }
+
+  .youtubeVideo {
+    width: 80vw;
+    margin-top: 10vh;
+    margin-bottom: 0px;
+  }
+  
+}
 .endorsementBox {
   display: flex;
   align-content: center;
