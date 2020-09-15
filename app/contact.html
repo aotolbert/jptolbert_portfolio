@@ -41,53 +41,53 @@
 
                 <div class="pageHeadlineContainer">
             
-                <div class="headlineDescription">
+                    <div class="headlineDescription">
 
-                    <p>
-                        To reach out to me directly, just complete the form below. Please provide your contact info and your request and I will be in touch with you as soon as possible!
-                    </p>
+                        <p>
+                            To reach out to me directly, just complete the form below. Please provide your contact info and your request and I will be in touch with you as soon as possible!
+                        </p>
+                    </div>
                 </div>
 
+                <div class="textBoxContainer">
+                    <div class="textBox">
 
-                <div class="textBox">
+                        <form id="contactForm" action="POST" data-netlify="true">
+                                <div class="form-row">
+                                    <label for="nameEntry">Name:</label>
 
-                    <form id="contactForm" action="POST" data-netlify="true">
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="firstName">First Name</label>
-                                    <input type="text" id="firstName" name="firstName" placeholder="John" required class="form-control">
+                                    <div id="nameEntry" class="form-group">
+                                        <input type="text" id="firstName" name="firstName" placeholder="First" required class="form-control">
+                                        <input type="text" id="lastName" name="lastName" placeholder="Last" required class="form-control">
+                                    </div>
                                 </div>
-                                <div class="form-group col-md-6">
-                                    <label for="lastName">Last Name</label>
-                                    <input type="text" id="lastName" name="lastName" placeholder="Doe" required class="form-control">
+                                <div class="form-row">
+                                    <label for="contactInfo">Contact Info:</label>
+                                    <div id="contactInfo" class="form-group">
+                                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="123-555-7891" pattern="[0-9]{10}" required class="form-control">
+                                        <input type="email" id="returnEmailAddress" name="returnEmailAddress" autocomplete="off" placeholder="youraddress@email.com" required  class="form-control"/>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="phoneNumber">Telephone</label>
-                                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="123-555-7891" pattern="[0-9]{10}" required class="form-control">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="emailContent">Message:</label>
+                                        <textarea class="form-control" id="emailContent" name="emailContent" rows="6" placeholder="Enter text here..." form="contactForm"></textarea>
+                                    </div>
                                 </div>
-                                <div class="form-group col-md-6">
-                                    <label for="returnEmailAddress">Your Email</label>
-                                    <input type="email" id="returnEmailAddress" name="returnEmailAddress" autocomplete="off" placeholder="me@email.com" required  class="form-control"/>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <div data-netlify-recaptcha="true"></div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Send Email!</button>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Message:</label>
-                                <textarea class="form-control" id="emailContentTextField" name="emailContent" rows="6" placeholder="Enter text here..." form="contactForm"></textarea>
-                            </div>
-                        
-                            <div class="form-group">
-                            <div data-netlify-recaptcha="true"></div>
-                            </div>
+                            </form>
+
+
+                    </div>     
+                </div>           
                 
-                            <button type="submit" class="btn btn-primary">Send Email!</button>
-                        </form>
-
-
-                </div>                
-                
-            </div>
 
 
             <div class="footer">
