@@ -44,16 +44,17 @@ function transformBackgroundMobile(scrollPosition) {
     
 }
 console.log(navigator.userAgent);
-var isMobile = navigator.userAgent.match(
-    /(iPhone|iPod|iPad|Android|webOS|BlackBerry|IEMobile|Opera Mini)/i);
-var isSafari = navigator.userAgent.match(
+let isMobile = navigator.userAgent.match(
+    /(Android|webOS|BlackBerry|IEMobile|Opera Mini)/i);
+let isIOS = (/iPad|iPhone|iPod/.test(navigator.platform) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) && !window.MSStream
+let isSafari = navigator.userAgent.match(
         /(Safari)/i);
 
 if(isSafari) {  
     console.log('This is is on safari');
 } 
 
-if(isMobile) {
+if(isMobile || isIOS) {
     // body.style.backgroundPosition = 'left top';
     // parallaxEl.classList.add('isMobile');
 
