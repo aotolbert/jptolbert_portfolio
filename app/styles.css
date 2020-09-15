@@ -276,14 +276,16 @@ html, body {
 
 
 .textBox {
-  min-height: 20vh;
   width: 85vw;
   background-color: rgba(255, 255, 255, .35);
   backdrop-filter: blur(15px);
   margin-top: 5vh;
   margin-bottom: 10vh;
   text-align: center;
-  padding: 25px;
+  padding-top: 7vh;
+  padding-bottom: 7vh;
+  padding-right: 5vw;
+  padding-left: 5vw;
 }
 
 .youtubeVideoContainer {
