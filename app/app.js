@@ -1,5 +1,9 @@
 console.log("I am alive!");
 
+let func = () => {
+  {};
+}
+
 
 let last_known_scroll_position = 0;
 let ticking = false;
