@@ -4,7 +4,6 @@ let func = () => {
   {};
 }
 
-
 let last_known_scroll_position = 0;
 let ticking = false;
 
@@ -14,7 +13,7 @@ let windowHeight = window.innerHeight;
 let scrollHeight = document.body.scrollHeight;
 
 let maxScollPositionY = scrollHeight - windowHeight;
-console.log('Max scroll => ' + maxScollPositionY);
+
 
 function transformBackground(scrollPosition) {
 
@@ -107,8 +106,6 @@ if(isMobile || isIOS) {
         }
       });
 }
-
-
 
 
 
