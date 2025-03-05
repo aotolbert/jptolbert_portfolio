@@ -18,7 +18,8 @@ code {
   color: light-dark(var(--light-code), var(--dark-code));
 }
 
-html, body {
+html,
+body {
   /* padding: 0;
   margin: 0;
   font-family: 'Courier New', Courier, monospace;
@@ -38,7 +39,6 @@ html, body {
   min-height: 100vh;
   background-size: 130vw 100vh;
   /* background-position-y: -150px; */
-
 }
 
 body {
@@ -56,8 +56,7 @@ body {
   text-align: center;
   border-radius: 10px;
   position: relative;
-  display: flex
-;
+  display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   /* align-content: stretch; */
@@ -83,8 +82,12 @@ body {
 
 #scrollHintBar i {
   color: light-dark(black, white);
-  -webkit-mask: radial-gradient(circle, #ffffff 150px, rgba(0, 0, 0, 0.1) 160px);
-  backdrop-filter:blur(10px);
+  -webkit-mask: radial-gradient(
+    circle,
+    #ffffff 150px,
+    rgba(0, 0, 0, 0.1) 160px
+  );
+  backdrop-filter: blur(10px);
   animation: fade-out-down 3s ease infinite;
 }
 
@@ -105,7 +108,7 @@ body {
 .colorCard {
   margin: 5px;
   /* background-image: light-dark(conic-gradient(from var(--angle), #00ff11, #00ff99, #00d5ff, #0033ff, #00ff73), conic-gradient(from var(--angle), #6200ff, #3700ff, #0022ff, #0033ff, #ff0048)); */
-  background:light-dark(white, #1c1f2b);
+  background: light-dark(white, #1c1f2b);
   text-align: center;
   border-radius: 10px;
   position: relative;
@@ -124,19 +127,26 @@ body {
   padding: 10px;
 }
 
-
-@property --angle{
+@property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
 }
 
-.colorCard::after, .colorCard::before {
-  content: '';
+.colorCard::after,
+.colorCard::before {
+  content: "";
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: conic-gradient(from var(--angle), #00ff11, #00ff99, #00d5ff, #0033ff, #00ff73);
+  background-image: conic-gradient(
+    from var(--angle),
+    #00ff11,
+    #00ff99,
+    #00d5ff,
+    #0033ff,
+    #00ff73
+  );
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -150,11 +160,11 @@ body {
   filter: blur(1.5rem);
   opacity: 0.5;
 }
-@keyframes spin{
-  from{
+@keyframes spin {
+  from {
     --angle: 0deg;
   }
-  to{
+  to {
     --angle: 360deg;
   }
 }
@@ -172,8 +182,6 @@ body {
   justify-content: center;
   flex-wrap: wrap;
 }
- 
-
 
 .profileBodyContainer {
   padding-top: 5vh;
@@ -185,15 +193,14 @@ body {
   align-content: space-between;
   min-width: 250px;
   margin: 3vw 0;
-  width:94vw;
+  width: 94vw;
   /* max-width: 800px; */
-
 }
 
 .pageHeadlineContainer {
   position: relative;
   padding: 3vw;
-  min-height: 75vh;  
+  min-height: 75vh;
   height: auto;
   width: 94vw;
   display: flex;
@@ -202,9 +209,6 @@ body {
   justify-content: space-evenly;
   align-items: center;
 }
-
-
-
 
 .headlineContainer {
   margin-left: 5vw;
@@ -225,23 +229,9 @@ body {
 }
 
 #profileImageContainer {
-  background-color: rgb(0,0,0,0.4);
-  width: 30vw;
-}
-
-.headlineImageHeroContainer {
-  margin-left: 5vw;
-  margin-top: 50px;
-  width: 90vw;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: stretch;
-  justify-content: flex-end;
-  border-radius: 10px 10px 0px 0px;
-  min-width: 300px;
-  min-height: 400px;
-  height: 50vh;
+  background-color: rgb(0, 0, 0, 0.4);
+  width: 80vw;
+  max-width: 600px;
 }
 
 a.colorText {
@@ -298,12 +288,11 @@ h3.colorText {
   -webkit-text-fill-color: transparent;
 } */
 
-.endorsementCardContainer { 
+.endorsementCardContainer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-
 }
 .headlineItem {
   text-align: center;
@@ -311,17 +300,12 @@ h3.colorText {
   flex-shrink: 1;
 }
 
-
 .headlineClassScheduleBar > .headlineItem {
   font-size: 0.9rem;
   max-width: 150px;
   padding-top: 15px;
   padding-bottom: 15px;
-
 }
-
-
-
 
 .socialIcon {
   height: 40px;
@@ -334,12 +318,12 @@ h3.colorText {
   height: auto;
   max-width: 80vw;
   max-height: 80vh;
-  border-radius: 4px 4px 0px 0px;
+  border-radius: 4px;
 }
 
 #profileInfoContainer {
   padding: 20px;
-  max-width: 1000px;
+  max-width: 95vw;
 }
 
 /* .headlineImagePicture{
@@ -357,7 +341,7 @@ h3.colorText {
   margin-left: 5vw;
   margin-right: 5vw;
   background-color: ivory;
-  width: 40vw; 
+  width: 40vw;
   min-height: 20vh;
   display: flex;
   flex-direction: row;
@@ -369,23 +353,20 @@ h3.colorText {
   text-align: center;
 }
 
-
-
 .glassCard {
   width: auto;
   max-width: 40vw;
-  background-color: rgba(255, 255, 255, .15);
+  background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(15px);
   margin-top: 5vh;
   margin-bottom: 10vh;
   border-radius: 10px;
   text-align: center;
   padding: 25px;
-
 }
 
 .glassPanel {
-  background-color: rgba(255, 255, 255, .15);
+  background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(15px);
   margin-top: 5vh;
   margin-bottom: 10vh;
@@ -397,8 +378,6 @@ h3.colorText {
   padding-left: 5vw;
   min-width: 250px;
   width: 80vw;
-  
-
 }
 
 .youtubeVideoContainer {
@@ -408,7 +387,6 @@ h3.colorText {
   align-content: space-between;
   flex-wrap: nowrap;
 }
-
 
 .youtubeVideo {
   min-width: 375px;
@@ -433,7 +411,6 @@ h3.colorText {
     margin-top: 10vh;
     margin-bottom: 0px;
   }
-  
 }
 .endorsementBox {
   display: flex;
@@ -444,7 +421,7 @@ h3.colorText {
   box-shadow: 1px 2px 7px 0px;
   min-height: 20vh;
   width: 85vw;
-  background-color: rgba(255, 255, 255, .85);
+  background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(15px);
   margin-top: 5vh;
   margin-bottom: 5vh;
@@ -459,16 +436,12 @@ h3.colorText {
 
 .endorsementImage {
   width: 100%;
-
 }
 
 .endorsementText {
   padding: 25px;
   text-align: initial;
 }
-
-
-
 
 #emailContent {
   width: 100%;
@@ -479,7 +452,7 @@ input {
   min-width: 300px;
   min-height: 25px;
   padding: 5px;
-  box-shadow: 1px 2px 1px 0px black;  
+  box-shadow: 1px 2px 1px 0px black;
 }
 
 textarea {
@@ -487,15 +460,14 @@ textarea {
   min-width: 300px;
   min-height: 25px;
   padding: 5px;
-  box-shadow: 4px 4px 6px 0px black;}
+  box-shadow: 4px 4px 6px 0px black;
+}
 
 .form-row {
   margin-top: 10px;
   margin-bottom: 10px;
   min-width: 300px;
-} 
-
-
+}
 
 h1 {
   font-size: 100px;
@@ -521,7 +493,6 @@ h1 {
   }
 }
 
-
 .iconContainer {
   display: flex;
   justify-content: center;
@@ -530,7 +501,7 @@ h1 {
   margin-top: 2em;
 }
 .iconContainer .colorCard {
- margin: 0 1em;
+  margin: 0 1em;
 }
 
 i {
@@ -546,7 +517,7 @@ i {
    0 0 100px #0072ff,
    0 0 150px #0072ff,
    0 0 200px #0072ff; */
-     /* box-shadow: 
+  /* box-shadow: 
     2px 2px 2px #00000080,
     10px 1px 12px #00000080,
     2px 2px 10px #00000080, 
@@ -557,16 +528,12 @@ i {
     inset 2px 2px 10px #00000080; */
 }
 
-
 i:hover {
-    animation: colorPulse 3s linear infinite;
-  text-shadow: 
-   0 0 50px #fffb846e,
-   0 0 100px #fffb846e,
-   0 0 150px #fffb846e,
-   0 0 200px #fffb846e;
+  animation: colorPulse 3s linear infinite;
+  text-shadow: 0 0 50px #fffb846e, 0 0 100px #fffb846e, 0 0 150px #fffb846e,
+    0 0 200px #fffb846e;
 
-       /* box-shadow: 
+  /* box-shadow: 
     2px 2px 2px #00000080,
     10px 1px 12px #00000080,
     2px 2px 10px #00000080, 
@@ -575,13 +542,11 @@ i:hover {
     inset 2px 2px 10px #00000080, 
     inset 2px 2px 10px #00000080,
     inset 2px 2px 10px #00000080; */
-
 }
 
 #contactEmail {
   color: light-dark(#29292a, #dadada);
   animation-delay: 0.3s;
-
 }
 
 #linkedin {
@@ -593,7 +558,6 @@ i:hover {
   animation-delay: 0.7s;
 }
 
-
 @keyframes colorWheel {
   0% {
     filter: hue-rotate(0deg);
@@ -604,12 +568,11 @@ i:hover {
   100% {
     filter: hue-rotate(360deg);
   }
-  
 }
 
 @keyframes colorPulse {
   0% {
-    filter: brightness(1)
+    filter: brightness(1);
   }
   50% {
     filter: brightness(1.5);
@@ -619,10 +582,9 @@ i:hover {
   }
 }
 
-
 @keyframes excitedBounce {
   0% {
-    filter: brightness(1)
+    filter: brightness(1);
   }
   50% {
     filter: brightness(1.5);
