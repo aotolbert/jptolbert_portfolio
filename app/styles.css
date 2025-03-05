@@ -240,16 +240,9 @@ body {
   color: #1e1f23;
   text-shadow: 1px 1px 0 rgba(255,255,255,0.4);
 } */
-.highlightedText {
-  background-image: linear-gradient(to right, #25b0a9 50%, #31fe03 50%);
-  background-position: 0;
-  background-size: 200%;
-  background-blend-mode: color-burn;
-  transition: all 0.4s;
-}
-.highlightedText:hover {
-  background-position: -100%;
-}
+
+
+
 
 a.colorText {
   text-decoration-line: underline;
@@ -380,6 +373,27 @@ h3.colorText {
   border-radius: 10px;
   text-align: left;
   padding: 25px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.15) 50%, rgba(165, 190, 156, 0.15) 50%);
+  background-position: 0;
+  background-size: 200%;
+  background-blend-mode: color-burn;
+  transition: all 0.4s;
+}
+
+
+.glassCard:hover {
+  box-shadow: 0 0 0 0;
+}
+
+.highlightedText {
+  background-image: linear-gradient(to right, #25b0a9 50%, #8c9d88 50%);
+  background-position: 0;
+  background-size: 200%;
+  background-blend-mode: color-burn;
+  transition: all 0.4s;
+}
+.glassCard:hover {
+  background-position: -100%;
 }
 
 .glassPanel {
@@ -430,6 +444,78 @@ h3.colorText {
   }
 }
 
+.flairIcon {
+  position: absolute;
+  font-size: 3em;
+  overflow: hidden;
+}
+
+#flairIconOne {
+  left: 50px;
+  top: 5vh;
+}
+
+#flairIconTwo {
+  right: 10vw;
+  bottom: 5vh;
+}
+
+#flairIconThree {
+  left: 10vw;
+  bottom: -5vh;
+}
+
+#flairIconFour {
+  right: 20vw;
+}
+
+#flairIconFive {
+  left: 15vw;
+  bottom: -50vh;
+}
+
+
+/* #flairIconSix {
+  left: 10vw;
+  bottom: 30vh;
+}
+
+#flairIconSeven {
+  right: 10vw;
+  bottom: 5vh;
+}
+
+#flairIconEight {
+  left: 10vw;
+  bottom: -15vh;
+}
+
+#flairIconNine {
+  right: 20vw;
+  top: 150vh;
+}
+
+#flairIconTen {
+  left: 30vw;
+  top: 250vh;
+} */
+
+.roll-out {
+  animation: roll-out 2s linear infinite;
+}
+.hinge {
+  animation: hinge 2s ease infinite;
+}
+.hithere {
+  animation: hithere 1s ease infinite;
+}
+.rotate-in-up-left {
+  animation: rotate-in-up-left 2s ease infinite;
+}
+.flip {
+	backface-visibility: visible !important;
+	animation: flip 2s ease infinite;
+}
 
 .highlightsPanel {
   display: flex;
@@ -722,4 +808,80 @@ i:hover {
   }
   70% { transform: scale(.9); }
   100% { transform: scale(1); }
+}
+
+@keyframes hinge {
+  0% { transform: rotate(0); transform-origin: top left; animation-timing-function: ease-in-out; }  
+  20%, 60% { transform: rotate(80deg); transform-origin: top left; animation-timing-function: ease-in-out; }  
+  40% { transform: rotate(60deg); transform-origin: top left; animation-timing-function: ease-in-out; } 
+  80% { transform: rotate(60deg) translateY(0); opacity: 1; transform-origin: top left; animation-timing-function: ease-in-out; } 
+  100% { transform: translateY(700px); opacity: 0; }
+}
+
+@keyframes hithere {
+  30% { transform: scale(1.2); }
+  40%, 60% { transform: rotate(-20deg) scale(1.2); }
+  50% { transform: rotate(20deg) scale(1.2); }
+  70% { transform: rotate(0deg) scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes rotate-in-up-left {
+  0% {
+    transform-origin: left bottom;
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform-origin: left bottom;
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes roll-out {
+    0% {
+    opacity: 1;
+    transform: translateX(0px) rotate(0deg);
+  }
+  25% {
+    opacity: 1;
+    transform: translateX(100%) translateY(25%) rotate(120deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(200%) translateY(75%) rotate(240deg);
+  }
+  75% {
+    opacity: 0.25;
+    transform: translateX(300%) translateY(125%) rotate(360deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(400%) translateY(150%) rotate(480deg);
+  }
+}
+
+@keyframes flip {
+	0% {
+		transform: perspective(400px) rotateY(0);
+		animation-timing-function: ease-out;
+	}
+	40% {
+		transform: perspective(400px) translateZ(150px) rotateY(170deg);
+		animation-timing-function: ease-out;
+	}
+	50% {
+		transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+		animation-timing-function: ease-in;
+	}
+	80% {
+		transform: perspective(400px) rotateY(360deg) scale(.95);
+		animation-timing-function: ease-in;
+	}
+	100% {
+		transform: perspective(400px) scale(1);
+		animation-timing-function: ease-in;
+	}
 }
