@@ -230,8 +230,25 @@ body {
 
 #profileImageContainer {
   background-color: rgb(0, 0, 0, 0.4);
-  width: 80vw;
+  width: auto;
   max-width: 600px;
+}
+
+/* a {
+  font-size: 4rem;
+  text-decoration: none;
+  color: #1e1f23;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.4);
+} */
+.highlightedText {
+  background-image: linear-gradient(to right, #25b0a9 50%, #31fe03 50%);
+  background-position: 0;
+  background-size: 200%;
+  background-blend-mode: color-burn;
+  transition: all 0.4s;
+}
+.highlightedText:hover {
+  background-position: -100%;
 }
 
 a.colorText {
@@ -316,8 +333,8 @@ h3.colorText {
 .headlineImage {
   width: 100%;
   height: auto;
-  max-width: 80vw;
-  max-height: 80vh;
+  max-width: 75vw;
+  max-height: 75vh;
   border-radius: 4px;
 }
 
@@ -354,14 +371,14 @@ h3.colorText {
 }
 
 .glassCard {
-  width: auto;
-  max-width: 40vw;
+  width: 80vw;
+  max-width: 600px;
   background-color: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(15px);
+  /* backdrop-filter: blur(15px); */
   margin-top: 5vh;
   margin-bottom: 10vh;
   border-radius: 10px;
-  text-align: center;
+  text-align: left;
   padding: 25px;
 }
 
@@ -412,6 +429,25 @@ h3.colorText {
     margin-bottom: 0px;
   }
 }
+
+
+.highlightsPanel {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  box-shadow: 1px 2px 7px 0px;
+  min-height: 20vh;
+  width: 85vw;
+  /* background-color: rgba(255, 255, 255, 0.85); */
+  backdrop-filter: blur(15px);
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  text-align: center;
+  padding: 25px;
+}
+
 .endorsementBox {
   display: flex;
   align-content: center;
@@ -439,8 +475,31 @@ h3.colorText {
 }
 
 .endorsementText {
+  /* opacity: 0; */
   padding: 25px;
   text-align: initial;
+  animation-fill-mode: both;
+  /* animation-delay: 1s; */
+}
+
+.revealFromRight {
+  opacity: 1;
+  animation: bounce-in-right 2s ease;
+  animation-fill-mode: both;
+  /* animation-delay: 1s; */
+}
+
+.concealToRight {
+  opacity: 1;
+  animation: bounce-in-right 2s reverse;
+  animation-fill-mode: both;
+  /* animation-delay: 1s; */
+}
+.revealFromBackground {
+  opacity: 1;
+  animation: bounce-in 2s ease;
+  animation-fill-mode: both;
+  /* animation-delay: 1s; */
 }
 
 #emailContent {
@@ -474,19 +533,29 @@ h1 {
   margin: 0;
   text-align: center;
 }
-@media (min-width: 419px) {
+@media (max-width: 419px) {
   h1 {
-    font-size: 100px;
-    font-size: calc((0.0989119683 * 100vw + (58.5558852621px)));
+    font-size: 40px;
+    /* font-size: calc((0.0989119683 * 100vw + (58.5558852621px))); */
   }
   h2 {
+    font-size:20px;
+    /* font-size: calc((0.0989119683 * 100vw + (58.5558852621px))); */
+  }
+}
+@media (min-width: 419px) {
+  h1 {
     font-size: 75px;
-    font-size: calc((0.0989119683 * 100vw + (58.5558852621px)));
+    /* font-size: calc((0.0989119683 * 100vw + (58.5558852621px))); */
+  }
+  h2 {
+    font-size:35px;
+    /* font-size: calc((0.0989119683 * 100vw + (58.5558852621px))); */
   }
 }
 @media (min-width: 1430px) {
   h1 {
-    font-size: 175px;
+    font-size: 100px;
   }
   p {
     font-size: 2rem;
@@ -499,18 +568,27 @@ h1 {
   align-items: center;
   height: auto;
   margin-top: 2em;
+  margin-bottom: 2em;
 }
 .iconContainer .colorCard {
   margin: 0 1em;
 }
 
+
 i {
+  color: light-dark(black, white);
+}
+
+#scrollHintBar > i {
+  font-size: 1em;
+  border-radius: 30px;
+  padding: 10px 30px;
+}
+
+.iconContainer i {
   font-size: 2em;
-  color: white;
-  /* background-color: #ffffff; */
-  border-radius: 29px;
-  padding: 11px 19px;
-  /* margin: 0 40px; */
+  border-radius: 30px;
+  padding: 10px 10px;
   /* animation: colorPulse 3s linear infinite; */
   /* text-shadow: 
    0 0 50px #0072ff,
@@ -595,15 +673,15 @@ i:hover {
 }
 @keyframes fade-out-down {
   0% {
-    opacity: 1;
+    opacity: 0;
     transform: translateY(0);
   }
   50% {
-    opacity: 0;
+    opacity: 1;
     transform: translateY(20px);
   }
   100% {
-    opacity: 1;
+    opacity: 0;
     transform: translateY(0px);
   }
 }
@@ -615,4 +693,33 @@ i:hover {
   100% {
     opacity: 0;
   }
+}
+
+
+@keyframes bounce-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-30px);
+  }
+  80% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+
+
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% { transform: scale(.9); }
+  100% { transform: scale(1); }
 }
