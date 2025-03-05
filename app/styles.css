@@ -1,10 +1,22 @@
+:root {
+  /* this has to be set to switch between light or dark */
+  color-scheme: light dark;
 
+  --light-bg: ghostwhite;
+  --light-color: darkslategray;
+  --light-code: tomato;
 
-*{
-  margin: 0;
-  padding: 0;  
+  --dark-bg: darkslategray;
+  --dark-color: ghostwhite;
+  --dark-code: gold;
 }
-
+* {
+  /* background-color: light-dark(var(--light-bg), var(--dark-bg)); */
+  color: light-dark(var(--light-color), var(--dark-color));
+}
+code {
+  color: light-dark(var(--light-code), var(--dark-code));
+}
 
 html, body {
   /* padding: 0;
@@ -30,10 +42,12 @@ html, body {
 }
 
 body {
+  color: light-dark(#333b3c, #efefec);
+  background-color: light-dark(#efedea, #202528);
   height: 100%;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
-  background: #0b0d15;
+  /* background: #0b0d15; */
 }
 
 #nameCard {
@@ -68,6 +82,7 @@ body {
 }
 
 #scrollHintBar i {
+  color: light-dark(black, white);
   -webkit-mask: radial-gradient(circle, #ffffff 150px, rgba(0, 0, 0, 0.1) 160px);
   backdrop-filter:blur(10px);
   animation: fade-out-down 3s ease infinite;
@@ -89,7 +104,8 @@ body {
 }
 .colorCard {
   margin: 5px;
-  background: #1c1f2b;
+  /* background-image: light-dark(conic-gradient(from var(--angle), #00ff11, #00ff99, #00d5ff, #0033ff, #00ff73), conic-gradient(from var(--angle), #6200ff, #3700ff, #0022ff, #0033ff, #ff0048)); */
+  background:light-dark(white, #1c1f2b);
   text-align: center;
   border-radius: 10px;
   position: relative;
@@ -233,11 +249,20 @@ a.colorText {
   border-bottom: 1px solid #dadada;
 }
 
-.colorText {
-  font-size: larger;
-  -webkit-text-fill-color: transparent;
+span.colorText {
+  font-size: 110%;
 }
 
+h3.colorText {
+  font-size: 200%;
+}
+
+.colorText {
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(#46bec2, #25ff99);
+  -webkit-background-clip: text;
+}
+/* 
 .colorText.blue {
   background: -webkit-linear-gradient(#9ecbf3, #196fdf);
   -webkit-background-clip: text;
@@ -261,7 +286,7 @@ a.colorText {
 .colorText.pink {
   background: -webkit-linear-gradient(#e5eab9, #b178b1);
   -webkit-background-clip: text;
-}
+} */
 /* .headlineContainer > h1 {
   background: -webkit-linear-gradient(#ffd900, #95f800);
   -webkit-background-clip: text;
@@ -314,6 +339,7 @@ a.colorText {
 
 #profileInfoContainer {
   padding: 20px;
+  max-width: 1000px;
 }
 
 /* .headlineImagePicture{
@@ -481,10 +507,17 @@ h1 {
     font-size: 100px;
     font-size: calc((0.0989119683 * 100vw + (58.5558852621px)));
   }
+  h2 {
+    font-size: 75px;
+    font-size: calc((0.0989119683 * 100vw + (58.5558852621px)));
+  }
 }
 @media (min-width: 1430px) {
   h1 {
-    font-size: 200px;
+    font-size: 175px;
+  }
+  p {
+    font-size: 2rem;
   }
 }
 
@@ -499,6 +532,7 @@ h1 {
 .iconContainer .colorCard {
  margin: 0 1em;
 }
+
 i {
   font-size: 2em;
   color: white;
@@ -522,22 +556,7 @@ i {
     inset 2px 2px 10px #00000080,
     inset 2px 2px 10px #00000080; */
 }
-button {
-  padding: 10px 50px 15px 50px !important;
-  color:white;
-  font-size: 1em;
-}
 
-button:hover {
-  animation: colorPulse 3s linear infinite;
-  color: black;
-  font-weight: bolder;
-text-shadow: 
- 0 0 50px #fffb846e,
- 0 0 100px #fffb846e,
- 0 0 150px #fffb846e,
- 0 0 200px #fffb846e;
-}
 
 i:hover {
     animation: colorPulse 3s linear infinite;
@@ -559,7 +578,11 @@ i:hover {
 
 }
 
+#contactEmail {
+  color: light-dark(#29292a, #dadada);
+  animation-delay: 0.3s;
 
+}
 
 #linkedin {
   color: #0a66c2;
