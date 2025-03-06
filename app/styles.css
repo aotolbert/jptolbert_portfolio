@@ -609,7 +609,10 @@ textarea {
   min-width: 300px;
   min-height: 25px;
   padding: 5px;
-  box-shadow: 4px 4px 6px 0px black;
+  /* box-shadow: 4px 4px 6px 0px black; */
+  width: 97%;
+  /* padding: 2% 2%; */
+  border-width: 5px;
 }
 
 .form-row {
