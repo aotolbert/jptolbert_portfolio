@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Adam Tolbert" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <meta name="theme-color" content="ghostwhite">
+  <title>Contact Jill Tolbert</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+
+</head>
+<body>
+    <div class="container">    
+ 
+        <div class="wrapper">            
+
+            <div class="glassPanel">
+                To reach out to me directly, just <span class="colorText">complete the form below.</span> Please provide your<span class="colorText"> contact info </span>and a <span class="colorText"> brief message </span>outlining your request, and I will be in touch with you as soon as possible!
+            </div>
+
+            <div class="colorCard">
+                <div class="textBox">
+                    <form id="contactForm" action="POST" data-netlify="true">
+                        <div class="form-row">
+                            <label for="nameEntry">Name:</label>
+                            <div id="nameEntry" class="form-group">
+                                <input type="text" id="firstName" name="firstName" placeholder="First" required class="form-control">
+                                <input type="text" id="lastName" name="lastName" placeholder="Last" required class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label for="contactInfo">Contact Info:</label>
+                            <div id="contactInfo" class="form-group">
+                                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="123-555-7891" pattern="[0-9]{10}" required class="form-control">
+                                <input type="email" id="returnEmailAddress" name="returnEmailAddress" autocomplete="off" placeholder="youraddress@email.com" required  class="form-control"/>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="emailContent">Message:</label>
+                                <textarea class="form-control" id="emailContent" name="emailContent" rows="6" placeholder="Enter text here..." form="contactForm"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <div data-netlify-recaptcha="true"></div>
+                            </div>
+                            <div class="colorCard">
+                                <button><span class="colorText">Send Email<i class="bi bi-envelope-at-fill" id="contactEmail" style="margin: 0 10px;"></i></span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>     
+            </div>           
+        </div>
+    </div>
+    
+    <script src='./app.js'></script>
+
+
+</body>
+</html>

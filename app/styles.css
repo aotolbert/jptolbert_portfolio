@@ -20,17 +20,6 @@ code {
 
 html,
 body {
-  /* padding: 0;
-  margin: 0;
-  font-family: 'Courier New', Courier, monospace;
-  max-width: 100%;
-  -ms-overflow-style: none;
-  background-image: url(../images/chalkboard_math_background.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 115vw 125vh;
-  background-position: 0px 0vh; */
   overflow-x: hidden;
   font-family: "Avenir Black";
   color: #dadada;
@@ -76,11 +65,14 @@ body {
   align-items: center;
   justify-content: center;
   bottom: 0;
-  position: absolute;
+  position: fixed;
   z-index: 9;
 }
 
-#scrollHintBar i {
+#scrollHintBar > i {
+  font-size: 1em;
+  border-radius: 30px;
+  padding: 10px 30px;
   color: light-dark(black, white);
   -webkit-mask: radial-gradient(
     circle,
@@ -89,16 +81,17 @@ body {
   );
   backdrop-filter: blur(10px);
   animation: fade-out-down 3s ease infinite;
+
 }
 
-.hiddenFromView i {
+.hiddenFromView {
   opacity: 0;
   animation: 2s dissapearElement linear;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 
-.appearIntoView i {
+.appearIntoView{
   opacity: 1;
   animation: 2s dissapearElement linear;
   animation-iteration-count: 1;
@@ -106,7 +99,6 @@ body {
   animation-direction: reverse;
 }
 .colorCard {
-  margin: 5px;
   /* background-image: light-dark(conic-gradient(from var(--angle), #00ff11, #00ff99, #00d5ff, #0033ff, #00ff73), conic-gradient(from var(--angle), #6200ff, #3700ff, #0022ff, #0033ff, #ff0048)); */
   background: light-dark(white, #1c1f2b);
   text-align: center;
@@ -123,8 +115,9 @@ body {
   max-width: 700px;
   min-height: 50px;
   height: auto;
-  max-height: 90vh;
+  /* max-height: 90vh; */
   padding: 10px;
+  margin: 20px;
 }
 
 @property --angle {
@@ -173,6 +166,7 @@ body {
   width: 100vw;
   /* background: grey; */
   font-size: 24px;
+  padding-bottom: 20vh;
 }
 
 .wrapper {
@@ -241,8 +235,15 @@ body {
   text-shadow: 1px 1px 0 rgba(255,255,255,0.4);
 } */
 
+button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: light-dark(darkslategray, ghostwhite);
+}
 
-
+button > i {
+  font-size: 2em;
+}
 
 a.colorText {
   text-decoration-line: underline;
@@ -254,7 +255,7 @@ span.colorText {
 }
 
 h3.colorText {
-  font-size: 200%;
+  font-size: 150%;
 }
 
 .colorText {
@@ -332,8 +333,10 @@ h3.colorText {
 }
 
 #profileInfoContainer {
-  padding: 20px;
-  max-width: 95vw;
+  padding: 1vw;
+  max-width: 92vw;
+  width: auto;
+
 }
 
 /* .headlineImagePicture{
@@ -528,9 +531,9 @@ h3.colorText {
   justify-content: center;
   flex-wrap: wrap;
   border-radius: 10px;
-  box-shadow: 1px 2px 7px 0px;
+  box-shadow: grey 1px 2px 7px 0px inset;
   min-height: 20vh;
-  width: 85vw;
+  width: 80vw;
   /* background-color: rgba(255, 255, 255, 0.85); */
   backdrop-filter: blur(15px);
   margin-top: 5vh;
@@ -591,10 +594,6 @@ h3.colorText {
   animation: bounce-in 2s ease;
   animation-fill-mode: both;
   /* animation-delay: 1s; */
-}
-
-#emailContent {
-  width: 100%;
 }
 
 input {
@@ -670,11 +669,7 @@ i {
   color: light-dark(black, white);
 }
 
-#scrollHintBar > i {
-  font-size: 1em;
-  border-radius: 30px;
-  padding: 10px 30px;
-}
+
 
 .iconContainer i {
   font-size: 2em;

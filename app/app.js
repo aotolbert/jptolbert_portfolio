@@ -17,7 +17,7 @@ let scrollHeight = document.body.scrollHeight;
 let maxScollPositionY = scrollHeight - windowHeight;
 
 function hideScrollBarHintOnScroll(scrollPosition) {
-  // console.log(scrollPosition);
+  console.log(scrollPosition);
   if(scrollPosition < 100 & scrollHintIsHidden) {
     // console.log('User has scrolled up enough to hide content that would indicate scrolling is needed, and the icon is still hidden. We need to trigger the revealing of the scroll hint');
     scrollHintEl.classList.remove('hiddenFromView');
