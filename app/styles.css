@@ -34,7 +34,7 @@ body {
   color: light-dark(#333b3c, #efefec);
   background-color: light-dark(#efedea, #202528);
   height: 100%;
-  overflow: scroll;
+  /* overflow: scroll; */
   -webkit-overflow-scrolling: touch;
   /* background: #0b0d15; */
 }
@@ -175,6 +175,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  overflow-x: hidden;
 }
 
 .profileBodyContainer {
